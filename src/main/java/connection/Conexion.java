@@ -12,8 +12,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * CLase que crea las conexiones a utilizar en la base de datos y lo demas
- * metodos del sistema
+ * Clase que crea las conexiones a utilizar en la base de datos y lo demas
+ * metodos del sistema.
  *
  * @author melissa
  * @since 20/11/2017
@@ -37,7 +37,7 @@ public class Conexion {
     private void initConection() {
         try {
             Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost/hr?user=melissa&password=h01e02s94");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost/Renta?user=melissa&password=h01e02s94");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -62,8 +62,6 @@ public class Conexion {
      *
      * @return con que es la conexión de la base de datos.
      */
-    public Connection getCon() {
-        return con;
-    }
-
+    public Connection getCon() { return this.con; }
+    
 }
